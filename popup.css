@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 450px; /* Изменение ширины попапа на 450px */
+    height: auto;
+    border-radius: 20px;
+    background-color: rgba(240, 240, 240, 0);
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    border-style: solid;
+    border-color: #65a873;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px; /* Добавление отступов краям формы */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea, input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    resize: none; /* Делаем поля нерасширяемыми */
+}
+
+textarea::-webkit-scrollbar,
+input[type="number"]::-webkit-scrollbar {
+    width: 5px; /* Уменьшаем ширину скроллбара */
+}
+
+textarea::-webkit-scrollbar-thumb,
+input[type="number"]::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover,
+input[type="number"]::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+textarea::-webkit-scrollbar-track,
+input[type="number"]::-webkit-scrollbar-track {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    flex: auto;
+    width: 100%;
+    display: flex;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Изменено с justify-items на align-items */
+    position: relative;
+    padding-right: 35px; /* Изменено с padding-left на padding-right */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: relative; /* Изменено с absolute на relative */
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 20%;
+    margin-left: 10px; /* Добавлено для расстояния между чекбоксом и текстом */
+}
+
+.checkbox-container:hover .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked + .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}

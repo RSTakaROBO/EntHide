@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EntHide settings</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="popup.js"></script>
+</head>
+<body>
+<h2><b>[EntHide]</b> Settings</h2>
+<form>
+    <label class="rating-container">Min Rating:
+        <input type="number" id="minRatingInput" min="-100" step="1">
+    </label>
+    <label class="checkbox-container"><div>Make filtered posts transparent</div>
+        <input type="checkbox" id="softFilterCheckbox">
+        <span class="checkmark"></span>
+    </label>
+</form>
+<form id="filterForm">
+    <label for="filterInput">Hide those communities:</label>
+    <textarea id="filterInput" name="filterInput" rows="4" cols="50"
+              placeholder="Enter community links here"></textarea>
+    <br>
+    <label for="filterInputUser">Hide those users:</label>
+    <textarea id="filterInputUser" name="filterInputUser" rows="4" cols="50" placeholder="Enter user links"></textarea>
+    <br>
+    <label for="whiteListFilter">White list filter:</label>
+    <textarea id="whiteListFilter" name="whiteListFilter" rows="4" cols="50" placeholder="Enter user links"></textarea>
+    <br>
+    <button type="submit">Save</button>
+</form>
+<br>
+</body>
+</html>
